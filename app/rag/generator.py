@@ -8,7 +8,7 @@ settings = get_settings()
 class LocalLLM:
     def __init__(self) -> None:
         genai.configure(api_key=settings.gemini_api_key)
-        self.model = genai.GenerativeModel('gemini-1.5-flash')
+        self.model = genai.GenerativeModel('gemini-3.8-flash')
 
     def generate(self, query: str, context: list[dict]) -> tuple[str, bool, float]:
         prompt = self._prompt(query, context)

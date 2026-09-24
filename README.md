@@ -1,40 +1,25 @@
-# ShopFloor Copilot
+## first Step
 
-AI-assisted visual inspection and SOP agent for the Forward-Deployed Engineer assignment.
+From provide file in Email i have a gemini API key i am using Gemini LLM model here for answer generation, put that api key .env.example file 
+
 
 ## Architecture
 
-This project follows a strict Router-Service-Repository pattern. Features are encapsulated within modules in `app/modules/`.
+This project follows a strict Router-Service-Repository pattern. Features are encapsulated within modules in 
+
+`app/modules/`.
 Database interactions are performed asynchronously using SQLAlchemy and PostgreSQL.
 
 FastAPI -> Module Router -> Module Service -> Transaction Repository -> Async PostgreSQL.
 
 Every inspection produces an append-only audit record. Feedback updates an epsilon-greedy contextual bandit.
 
+
 ## Requirements
 
 - Docker and docker-compose
-- Tesseract OCR installed and available on PATH (If running locally without Docker)
-- Ollama installed and available on network/host
+- Docker Desktop
 
-## Setup (Docker)
-
-Ensure your Ollama service is running and accessible (e.g. at `http://host.docker.internal:11434` for Docker Desktop on Windows/Mac, or `http://localhost:11434` if using host network).
-Adjust the `OLLAMA_BASE_URL` in `.env.example` if needed.
-
-1. Create your `.env` file:
-   ```bash
-   cp .env.example .env
-   ```
-
-2. Build and start the services:
-   ```bash
-   docker-compose up --build -d
-   ```
-
-This will start:
-- A PostgreSQL database (`db`) on port 5432.
-- The FastAPI application (`api`) on port 8000.
 
 ## Endpoints
 
@@ -67,5 +52,4 @@ Audit replay:
 curl http://127.0.0.1:8000/transactions/YOUR_ID
 ```
 
-## Scope
-This repository intentionally avoids production authentication, multi-tenancy, cloud AI APIs, deep model training, and mobile UI because those are explicitly out of scope for the assignment.
+

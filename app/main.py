@@ -8,7 +8,7 @@ from app.modules.transactions.models import Transaction
 
 @contextlib.asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Initialize DB (create tables if they don't exist)
+    # Initialize DB (creating tables if they don't exist)
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
     yield

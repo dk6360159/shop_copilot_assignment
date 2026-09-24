@@ -25,8 +25,7 @@ class OCRService:
             gray,
             config="--psm 11 -c tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
         ).strip()
-
-        # Keep a compact audit value. If OCR is imperfect, return its text
+        
         # rather than inventing an ID.
         text = re.sub(r"\s+", " ", text)
         return text or None

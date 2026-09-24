@@ -4,9 +4,8 @@ from app.cv.preprocessing import decode_image, preprocess
 
 class DefectClassifier:
     """
-    Lightweight classical-CV classifier for synthetic assignment images.
+    Lightweight classical-CV classifier Images.
 
-    It intentionally does not pretend to be production-grade metrology.
     The classifier detects visual patterns that the included image generator
     creates: scratch lines, crack-like connected lines, and dimensional
     deviation markers.
