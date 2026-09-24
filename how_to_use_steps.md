@@ -32,6 +32,13 @@ refer this image
 
 Post Request 
 
+in body formdata 
+keys are 
+"query": Text= to ask something
+"work_order_id": TEXT= worker id
+"image":File type= add any image or the component
+
+
 url: http://0.0.0.0:8000 /inspect
 
 {{helping_screenshot\inspect_endpoint.png}}
@@ -59,3 +66,7 @@ url: http://0.0.0.0:8000 /transactions/{{transctionId}}
 
 {{helping_screenshot\transaction_details.png}}
 
+
+
+
+For Section 
