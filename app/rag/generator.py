@@ -22,10 +22,11 @@ class LocalLLM:
             if answer and elapsed <= settings.llm_latency_ceiling_seconds:
                 return answer, False, elapsed
 
-            # Governance requirement: do not retry the same slow path.
+            # Governance requirement:.
             return self._fallback(query, context), True, elapsed
         except Exception as e:
             print(f"LLM Exception: {e}")
+            
             elapsed = time.perf_counter() - started
             return self._fallback(query, context), True, elapsed
 
