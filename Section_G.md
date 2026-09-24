@@ -9,6 +9,7 @@ Vector RAG is ideal for a continuously growing SOP corpus because it isolates th
 An agent loop is justified for tool selection because shop floor queries are highly variable (e.g., text-only questions vs. image-only defect checks vs. hybrid queries requiring sequential CV, OCR, and DB lookups); a fixed pipeline would rigidly execute unneeded steps, wasting latency, or fail on unanticipated inputs. I would absolutely NOT make the final escalation or ERP-write workflows agentic. Any action that alters physical machinery, scraps inventory, or writes to a database must remain a deterministic, hard-coded, and human-gated pipeline to prevent catastrophic financial or safety incidents caused by LLM hallucinations.
 
 
+
 **3. Why you chose classical CV, a pretrained model, or both for the defect classifier — and what would push you to fine-tune a custom model instead.**
 
 

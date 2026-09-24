@@ -1,6 +1,6 @@
 ## first Step
 
-From provide file in Email i have a gemini API key i am using Gemini LLM model here for answer generation, put that api key .env.example file 
+From provide file in Email  gemini API key i am using Gemini LLM model here for response generation, put that api key .env.example file 
 
 
 ## Architecture
